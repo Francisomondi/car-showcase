@@ -7,14 +7,14 @@ export default function Home() {
       <Hero/>
       <div className='mt-12 padding-x padding-y max-width' id='discover'>
         <div className='home__text-container'>
-          <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
+          <h1 className='text-4xl font-extrabold'>Msafiri Car Catalogue</h1>
           <p>Expore the car you might like</p>
         </div>
         <div className='home__filters'>
           <SearchBar/>
           <div className='home__filter-container'>
-            <CustomFilter/>
-            <CustomFilter />
+            <CustomFilter title = 'fuel'/>
+            <CustomFilter title = 'Year'/>
           </div>
         </div>
       </div>
