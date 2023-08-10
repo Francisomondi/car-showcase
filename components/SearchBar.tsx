@@ -4,6 +4,7 @@ import SearchManufacturer from './SearchManufacturer'
 
 const SearchBar = () => {
     const [manufacturer, setManufacturer] = useState('')
+    
     const handleSearch=()=>{
 
     }
