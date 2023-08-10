@@ -3,10 +3,11 @@ import {useState} from 'react'
 import SearchManufacturer from './SearchManufacturer'
 
 const SearchBar = () => {
+    const [manufacturer, setManufacturer] = useState('')
     const handleSearch=()=>{
 
     }
-    const [manufacturer, setManufacturer] = useState('')
+    
   return (
     <form className='searchbar' 
     onSubmit={handleSearch}
