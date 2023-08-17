@@ -28,7 +28,7 @@ const SearchBar = () => {
         return alert("please fill in the form")
     
     }
-    updateSearchParams(manufacturer.toLowerCase(),model.toLowerCase())
+    updateSearchParams(model.toLowerCase(),manufacturer.toLowerCase())
     }
     const updateSearchParams= (model:string, manufacturer:string)=>{
       const searchParams = new URLSearchParams(window.location.search)
