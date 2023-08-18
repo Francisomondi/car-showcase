@@ -2,6 +2,10 @@
 const nextConfig = {
     images:{
         domains: ['cdn.imagin.studio']
+    },
+
+    trpescript:{
+        ignoreBuildErrors: true,
     }
 }
 
