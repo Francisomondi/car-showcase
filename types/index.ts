@@ -12,11 +12,8 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturerProps{
-    manufacturer: string
-    setManufacturer: (manufacturer:string)=>void
     selected: string
     setSelected: (selected: string) => void;
-    setModel:(model: string)=>void
 }
 
 export interface CarProps{
@@ -34,6 +31,12 @@ export interface CarProps{
     year:number
     message:string
 
+}
+export type CarState = CarProps[] & { message?: string };
+
+export interface SearchBarProps {
+    setManuFacturer: (manufacturer: string) => void;
+    setModel: (model: string) => void;
 }
 
 export interface FilterProps{

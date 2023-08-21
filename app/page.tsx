@@ -63,7 +63,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length<1 || !allCars
         </div>
         <div className='home__filters'>
           <SearchBar 
-          setManufacturer={setManufacturer}
+          setManuFacturer={setManufacturer}
           setModel={setModel}/>
           <div className='home__filter-container'>
             <CustomFilter 
@@ -104,6 +104,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length<1 || !allCars
         ):(
           <div className='home__error-container'>
             <h2 className='text-black text-xl font-bold'>Oops!..no cars were Found</h2>
+            
             
           </div>
         )}

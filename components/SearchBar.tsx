@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import Image from 'next/image'
 import SearchManufacturer from './SearchManufacturer'
 import router, { useRouter } from 'next/navigation'
+import { SearchBarProps } from '@/types'
 
 
 const SearchButton= ({otherClasses}:{otherClasses:string})=>(
@@ -16,7 +17,7 @@ const SearchButton= ({otherClasses}:{otherClasses:string})=>(
   
 
 
-const SearchBar = ({setManufacturer,setModel}) => {
+const SearchBar = ({setManuFacturer,setModel}:SearchBarProps) => {
     const [searchManufacturer, setSearchManufacturer] = useState('')
     const [searchModel, setSearchModel] = useState('')
     
@@ -28,8 +29,8 @@ const SearchBar = ({setManufacturer,setModel}) => {
         return alert("please fill in the form")
     
     }
-    setModel(searchModel),
-    setManufacturer(searchManufacturer)
+    setModel(searchModel)
+    setManuFacturer(searchManufacturer)
     }
     
     
@@ -40,11 +41,7 @@ const SearchBar = ({setManufacturer,setModel}) => {
         <div className='searchbar__item'>
             <SearchManufacturer
           selected={searchManufacturer}
-          setSelected={setSearchManufacturer} manufacturer={''} setManufacturer={function (manufacturer: string): void {
-            throw new Error('Function not implemented.')
-          } } setModel={function (model: string): void {
-            throw new Error('Function not implemented.')
-          } }/>
+          setSelected={setSearchManufacturer} />
 
             <SearchButton otherClasses='sm:hidden'/>
         </div>
