@@ -15,8 +15,6 @@ const SearchButton= ({otherClasses}:{otherClasses:string})=>(
   </button>
 )
   
-
-
 const SearchBar = ({setManuFacturer,setModel}:SearchBarProps) => {
     const [searchManufacturer, setSearchManufacturer] = useState('')
     const [searchModel, setSearchModel] = useState('')
