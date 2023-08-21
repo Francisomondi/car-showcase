@@ -15,7 +15,8 @@ export interface SearchManufacturerProps{
     manufacturer: string
     setManufacturer: (manufacturer:string)=>void
     selected: string
-    setSelected: (value: string) => void;
+    setSelected: (selected: string) => void;
+    setModel:(model: string)=>void
 }
 
 export interface CarProps{
