@@ -16,10 +16,10 @@ const SearchButton= ({otherClasses}:{otherClasses:string})=>(
   
 
 
-const SearchBar = ({setManufacturer,setModel}) => {
+const SearchBar = ({ setManufacturer,setModel }) => {
     const [searchManufacturer, setSearchManufacturer] = useState('')
     const [searchModel, setSearchModel] = useState('')
-    const router=useRouter()
+
     
     const handleSearch=(e: React.FormEvent<HTMLFormElement>)=>{
       e.preventDefault()
@@ -28,7 +28,7 @@ const SearchBar = ({setManufacturer,setModel}) => {
         return alert("please fill in the form")
     
     }
-    setModel(searchModel),
+    setModel(searchModel)
     setManufacturer(searchManufacturer)
     }
     
@@ -39,8 +39,12 @@ const SearchBar = ({setManufacturer,setModel}) => {
     >
         <div className='searchbar__item'>
             <SearchManufacturer
-            selected={searchManufacturer}
-            setSelected={setSearchManufacturer}/>
+          selected={searchManufacturer}
+          setSelected={setSearchManufacturer} 
+          manufacturer={''} 
+          setManufacturer={function (manufacturer: string): void {
+            throw new Error('Function not implemented.')
+          } }/>
 
             <SearchButton otherClasses='sm:hidden'/>
         </div>

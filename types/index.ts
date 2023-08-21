@@ -12,9 +12,12 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturerProps{
+    manufacturer: string
+    setManufacturer: (manufacturer:string)=>void
     selected: string
-    setSelected: (selected:string)=>void
+    setSelected: (value: string) => void;
 }
+
 export interface CarProps{
     city_mpg:number
     class:string
@@ -28,6 +31,7 @@ export interface CarProps{
     model: string
     transmission: string
     year:number
+    message:string
 
 }
 
@@ -46,11 +50,14 @@ export interface OptionProps{
 export interface CustomFilterprops{
     title: string
     options: OptionProps[]
+    setFilter:any
 }
 
 export interface ShowMoreProps{
     pageNumber: number
     isNext:boolean
+    setLimit:(limit:number)=>void
+
 }
 
 

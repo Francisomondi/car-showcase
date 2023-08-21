@@ -33,19 +33,18 @@ const getCars= async ()=>{
       limit:limit || 10,
     })
     setAllCars(result)
+
   } catch (error) {
     console.log(error)
   }
-
   finally{
     setLoading(false)
   }
   
 }
 
-
 useEffect(() => {
- 
+
     getCars()
   
 }, [fuel,year,limit,manufacturer,model])
@@ -89,7 +88,7 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length<1 || !allCars
 
             {loading && (
               <div className='mt-16 w-full flex-center'>
-                <Image src={'/loader.svg'}
+                <Image src='/loader.svg'
                 alt='loading...'
                 width={50}
                 height={50}
@@ -104,8 +103,8 @@ const isDataEmpty = !Array.isArray(allCars) || allCars.length<1 || !allCars
           </section>
         ):(
           <div className='home__error-container'>
-            <h2 className='text-black text-xl font-bold'>Oops!..no cars we Found</h2>
-            <p>{allCars?.message}</p>
+            <h2 className='text-black text-xl font-bold'>Oops!..no cars were Found</h2>
+            
           </div>
         )}
       </div>
